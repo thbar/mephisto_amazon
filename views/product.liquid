@@ -1,0 +1,12 @@
+<div class="amazon_book">
+	{% if product.image_url_medium != null %}
+		<img src="{{product.image_url_medium}}"/>
+	{% else %}
+	<br/>
+	(No image available)
+	{% endif %}
+	<br/>
+	<ul>
+		<li><a href="http://www.amazon.com/exec/obidos/ASIN/{{product.asin}}/bilibilip-20">find at Amazon.com</a></li>
+	</ul>
+</div>

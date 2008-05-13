@@ -1,0 +1,33 @@
+MephistoAmazon
+==============
+
+This plugin is a partial rewrite of Nicholas Faiz's MephistoAmazon.
+Instead of using Ruby/Amazon, it uses the new amazon/ecs (http://www.pluitsolutions.com/projects/amazon-ecs).
+There is one liquid filter and one tag so far: asin_search.
+You can modify how it renders by editing the liquid files in the views directory.
+Use the filter to render content in an article. Use the tag for the layout.
+
+ASIN Search
+-----------
+
+<filter:asin_search>0553214322</filter:asin_search>
+
+or
+
+{% asin_search books 0553214322 %} {% endkeyword_search %}
+
+What is a ASIN? See http://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number
+
+Authors
+=======
+
+Original work by Nicholas Faiz (https://tfw.devguard.com/svn/os/plugins/mephisto_amazon/).
+
+Adaptation to Amazon/ECS by Thibaut Barrère (http://blog.logeek.fr).
+
+The file ecs.rb and everything under the amazon directory is the work of Herryanto Siatono (released under the MIT License).
+
+Dependencies
+------------
+
+This plugin depends on Hpricot.
